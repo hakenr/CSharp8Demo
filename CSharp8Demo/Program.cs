@@ -7,6 +7,7 @@ namespace Haken.CSharp8Demo
         static void Main(string[] args)
         {
 			IndicesAndRanges.Demo();
+			SwitchExpressions.Demo();
         }
     }
 }
