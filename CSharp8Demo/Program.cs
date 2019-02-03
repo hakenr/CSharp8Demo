@@ -1,16 +1,19 @@
 ﻿using System;
+using System.Threading.Tasks;
 
 namespace Haken.CSharp8Demo
 {
     class Program
     {
-        static void Main(string[] args)
+        async static Task Main(string[] args)
         {
 			IndicesAndRanges.Demo();
 			SwitchExpressions.Demo();
 			PatternMatching.Demo();
 			StaticLocalFunctions.Demo();
 			UsingDeclarations.Demo();
+
+			await AsyncStreams.Demo();
 		}
     }
 }
