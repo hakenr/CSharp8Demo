@@ -14,7 +14,7 @@ namespace Haken.CSharp8Demo
 		public static void Demo()
 		{
 			// C# 7.0
-			static string Display0(object o)
+			string Display0(object o)
 			{
 				switch (o)
 				{
@@ -40,7 +40,7 @@ namespace Haken.CSharp8Demo
 
 
 			// C# 8.0 Property patterns
-			static string Display2(object o) => o switch
+			string Display2(object o) => o switch
 			{
 				Point { X: 0, Y: 0 }			=> "origin",
 				Point { X: var x, Y: var y }	=> $"({x}, {y})",
@@ -50,7 +50,7 @@ namespace Haken.CSharp8Demo
 
 
 			// C# 8.0 Property patterns II
-			static string Display3(object o) => o switch
+			string Display3(object o) => o switch
 			{
 				Point { X: 0, Y: 0 }			=> "origin",
 				Point { X: var x, Y: var y }	=> $"({x}, {y})",
@@ -63,7 +63,7 @@ namespace Haken.CSharp8Demo
 
 			// C# 8.0 Positional patterns - Deconstruction (Tuples)
 			(int x, int y) = new Point(10, 10);
-			static string Display4(object o) => o switch
+			string Display4(object o) => o switch
 			{
 				Point(0, 0)				=> "origin",
 				Point(var x, var y)		=> $"({x}, {y})",
@@ -73,7 +73,7 @@ namespace Haken.CSharp8Demo
 
 
 			// C# 8.0 Tuple patterns
-			static State ChangeState(State current, Transition transition, bool hasKey) =>
+			State ChangeState(State current, Transition transition, bool hasKey) =>
 			(current, transition) switch
 			{
 				(Opened, Close) => Closed,
@@ -86,7 +86,7 @@ namespace Haken.CSharp8Demo
 
 
 			// C# 8.0 Tuple patterns - more readable?
-			static State ChangeState2(State current, Transition transition, bool hasKey) =>
+			State ChangeState2(State current, Transition transition, bool hasKey) =>
 			(current, transition, hasKey) switch
 			{
 				(Opened, Close, _)		=> Closed,

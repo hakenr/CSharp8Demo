@@ -35,7 +35,7 @@ namespace Haken.CSharp8Demo
 
 
 			// same in C# 7.0
-			static string DisplayOld(object o)
+			string DisplayOld(object o)
 			{
 				switch (o)
 				{
