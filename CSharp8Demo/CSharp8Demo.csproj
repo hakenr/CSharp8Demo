@@ -1,19 +1,20 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
-  <PropertyGroup>
-    <OutputType>Exe</OutputType>
-    <TargetFramework>netcoreapp3.0</TargetFramework>
-    <AssemblyName>Haken.CSharp8Demo</AssemblyName>
-    <RootNamespace>Haken.CSharp8Demo</RootNamespace>
-    <LangVersion>8.0</LangVersion>
-  </PropertyGroup>
+	<PropertyGroup>
+		<OutputType>Exe</OutputType>
+		<TargetFramework>netcoreapp3.0</TargetFramework>
+		<AssemblyName>Haken.CSharp8Demo</AssemblyName>
+		<RootNamespace>Haken.CSharp8Demo</RootNamespace>
+		<LangVersion>8.0</LangVersion>
+		<NullableContextOptions>enable</NullableContextOptions>
+	</PropertyGroup>
 
-  <ItemGroup>
-    <Compile Remove="01_RangesImplementation.cs" />
-  </ItemGroup>
+	<ItemGroup>
+		<Compile Remove="01_RangesImplementation.cs" />
+	</ItemGroup>
 
-  <ItemGroup>
-    <None Include="01_RangesImplementation.cs" />
-  </ItemGroup>
+	<ItemGroup>
+		<None Include="01_RangesImplementation.cs" />
+	</ItemGroup>
 
 </Project>

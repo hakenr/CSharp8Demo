@@ -58,7 +58,6 @@ namespace Haken.CSharp8Demo
 				null							=> "null"
 			};
 			Console.WriteLine(Display3("blah")); // blah
-			Console.WriteLine(Display3(null)); // null
 
 
 			// C# 8.0 Positional patterns - Deconstruction (Tuples)
