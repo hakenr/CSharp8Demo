@@ -8,6 +8,7 @@ namespace Haken.CSharp8Demo
         {
 			IndicesAndRanges.Demo();
 			SwitchExpressions.Demo();
-        }
+			PatternMatching.Demo();
+		}
     }
 }

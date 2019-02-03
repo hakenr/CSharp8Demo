@@ -23,6 +23,7 @@ namespace Haken.CSharp8Demo
 			};
 			Console.WriteLine(x);
 
+
 			// supports pattern matching
 			string Display(object o) => o switch   // BTW local function (C# 7.0)
 			{
@@ -30,7 +31,25 @@ namespace Haken.CSharp8Demo
 				Point p								=> $"({p.X}, {p.Y})",
 				_									=> "unknown"
 			};
-			Console.WriteLine(Display(new Point(0, 0)));
+			Console.WriteLine(Display(new Point(0, 0))); // origin
+
+
+			// same in C# 7.0
+			static string DisplayOld(object o)
+			{
+				switch (o)
+				{
+					case Point p when p.X == 0 && p.Y == 0:
+						return "origin";
+					case Point p:
+						return $"({p.X}, {p.Y})";
+					default:
+						return "unknown";
+				}
+			}
+			Console.WriteLine(DisplayOld(new Point(0, 0))); // origin
+
+			// for further improvements see 03_PatternMatching.cs
 		}
 	}
 }

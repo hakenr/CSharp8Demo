@@ -12,10 +12,12 @@ namespace Haken.CSharp8Demo
 		{
 			int[] a = { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 };
 
+
 			Index i1 = 3;  // number 3 from beginning
 			Index i2 = ^4; // number 4 from end ("hat" operator)
 
 			Console.WriteLine($"{a[i1]}, {a[i2]}"); // "3, 6"
+
 
 			foreach (var i in a[2..5]) // start index is inclusive, end index is exclusive (non-inclusive)!
 			{
@@ -23,11 +25,13 @@ namespace Haken.CSharp8Demo
 			}
 			Console.WriteLine();
 
+
 			foreach (var i in a[8..^1]) // start index is inclusive, end index is exclusive (non-inclusive)!
 			{
 				Console.Write(i); // 8
 			}
 			Console.WriteLine();
+
 
 			foreach (var i in a[3..]) // start/end index only
 			{
@@ -35,17 +39,20 @@ namespace Haken.CSharp8Demo
 			}
 			Console.WriteLine();
 
+
 			foreach (var i in a[..]) // all
 			{
 				Console.Write(i); // 0123456789
 			}
 			Console.WriteLine();
 
+
 			// under discussion
 			//foreach (var y in 10..15)
 			//{
 			//	Console.Write(y);
 			//}
+
 
 			// under discussion
 			//var someValue = 3;
