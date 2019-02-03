@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.28516.95
+MinimumVisualStudioVersion = 15.0.26124.0
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CSharp8Demo", "CSharp8Demo\CSharp8Demo.csproj", "{CCD10F7C-A5C4-407F-9031-B04030BA13E9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CCD10F7C-A5C4-407F-9031-B04030BA13E9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CCD10F7C-A5C4-407F-9031-B04030BA13E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CCD10F7C-A5C4-407F-9031-B04030BA13E9}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{CCD10F7C-A5C4-407F-9031-B04030BA13E9}.Debug|x64.Build.0 = Debug|Any CPU
+		{CCD10F7C-A5C4-407F-9031-B04030BA13E9}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{CCD10F7C-A5C4-407F-9031-B04030BA13E9}.Debug|x86.Build.0 = Debug|Any CPU
+		{CCD10F7C-A5C4-407F-9031-B04030BA13E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CCD10F7C-A5C4-407F-9031-B04030BA13E9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CCD10F7C-A5C4-407F-9031-B04030BA13E9}.Release|x64.ActiveCfg = Release|Any CPU
+		{CCD10F7C-A5C4-407F-9031-B04030BA13E9}.Release|x64.Build.0 = Release|Any CPU
+		{CCD10F7C-A5C4-407F-9031-B04030BA13E9}.Release|x86.ActiveCfg = Release|Any CPU
+		{CCD10F7C-A5C4-407F-9031-B04030BA13E9}.Release|x86.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9B4C0F09-B2C8-46DB-B26E-572A4ECCEBA2}
+	EndGlobalSection
+EndGlobal
