@@ -10,29 +10,41 @@ namespace Haken.CSharp8Demo
     {
 		public async static Task Demo()
 		{
-			await foreach (var i in GetBigResultsAsync())
+			await using (var x = new MyAsyncDisposable())
 			{
-				Console.WriteLine(i);
-			}
-		}
-
-		public static async IAsyncEnumerable<int> GetBigResultsAsync()
-		{
-			await foreach (var result in GetResultsAsync())
-			{
-				if (result > 20)
+				await foreach (var i in x.GetBigResultsAsync())
 				{
-					yield return result;
+					Console.WriteLine(i);
 				}
 			}
 		}
 
-		public static async IAsyncEnumerable<int> GetResultsAsync()
+		public class MyAsyncDisposable : IAsyncDisposable
 		{
-			for (int i = 0; i < 30; i++)
+			public async IAsyncEnumerable<int> GetBigResultsAsync()
 			{
-				await Task.Delay(100);
-				yield return i;
+				await foreach (var result in GetResultsAsync())
+				{
+					if (result > 20)
+					{
+						yield return result;
+					}
+				}
+			}
+
+			public async IAsyncEnumerable<int> GetResultsAsync()
+			{
+				for (int i = 0; i < 30; i++)
+				{
+					await Task.Delay(100);
+					yield return i;
+				}
+			}
+
+			public async ValueTask DisposeAsync()
+			{
+				await Task.Delay(200);
+				Console.WriteLine("Dispose Async...");
 			}
 		}
 	}
