@@ -95,6 +95,14 @@ namespace Haken.CSharp8Demo
 				_ => throw new InvalidOperationException($"Invalid transition")
 			};
 			var s2 = ChangeState2(Closed, Lock, true); // Locked
+
+
+			// C# 8.0 Recursive Patterns - allowing patterns to contain other patterns (1: is Point, 2: X == 0)
+			object p = new Point(0, 20);
+			if (p is Point { X: 0, Y: var pY })
+			{
+				Console.WriteLine(pY);
+			}
 		}
 	}
 
