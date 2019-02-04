@@ -14,6 +14,8 @@ namespace Haken.CSharp8Demo
 			UsingDeclarations.Demo();
 
 			await AsyncStreams.Demo();
+
+			TargetTypedNew.Demo();
 		}
     }
 }
