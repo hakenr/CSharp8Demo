@@ -12,10 +12,9 @@ namespace Haken.CSharp8Demo
 			PatternMatching.Demo();
 			StaticLocalFunctions.Demo();
 			UsingDeclarations.Demo();
-
 			await AsyncStreams.Demo();
-
 			TargetTypedNew.Demo();
+			NullCoallescingAssignment.Demo();
 		}
     }
 }
