@@ -8,7 +8,7 @@ namespace Haken.CSharp8Demo
     {
         async static Task Main(string[] args)
         {
-			IndicesAndRanges.Demo();
+			//IndicesAndRanges.Demo();
 			SwitchExpressions.Demo();
 			PatternMatching.Demo();
 			StaticLocalFunctions.Demo();

@@ -8,12 +8,13 @@ namespace Haken.CSharp8Demo
 {
     public class IndicesAndRanges
     {
-		public static void Demo()
+		// broken in VS2019 Prev4/RC: "Missing compiler required member 'System.Range..ctor'" :-)
+        public static void Demo()
 		{
 			int[] a = { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 };
 
 
-			Index i1 = 3;  // number 3 from beginning
+			Index i1 = 3;  // number 3 from beginning (zero-based)
 			Index i2 = ^4; // number 4 from end ("hat" operator)
 
 			Console.WriteLine($"{a[i1]}, {a[i2]}"); // "3, 6"
