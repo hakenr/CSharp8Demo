@@ -18,7 +18,8 @@ namespace Haken.CSharp8Demo
 			// C# 8.0 - Not released in Preview yet
 			// using var reader2 = XmlReader.Create("https://knowledge-base.havit.eu/feed/", new() { IgnoreWhitespace = true });
 
-			//Point[] ps = { new (1, 4), new (3,-2), new (9, 5) };
+			// Point[] ps = { new (1, 4), new (3,-2), new (9, 5) };
+			// List<string> list = new (10);
 		}
 	}
 }
