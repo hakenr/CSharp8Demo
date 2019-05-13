@@ -10,12 +10,10 @@
 	</PropertyGroup>
 
 	<ItemGroup>
-		<Compile Remove="01_IndicesAndRanges.cs" />
 		<Compile Remove="01_RangesImplementation.cs" />
 	</ItemGroup>
 
 	<ItemGroup>
-		<None Include="01_IndicesAndRanges.cs" />
 		<None Include="01_RangesImplementation.cs" />
 	</ItemGroup>
 
