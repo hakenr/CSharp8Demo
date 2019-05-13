@@ -34,6 +34,9 @@ namespace Haken.CSharp8Demo
 
 			Console.WriteLine("\n=== DefaultInterfaceMethods ===");
 			DefaultInterfaceMethods.Demo();
+
+			Console.WriteLine("\n=== DisposableRefStruct ===");
+			DisposableRefStruct.Demo();
 		}
-    }
+	}
 }
