@@ -16,6 +16,7 @@ namespace Haken.CSharp8Demo
 			await AsyncStreams.Demo();
 			TargetTypedNew.Demo();
 			NullCoallescingAssignment.Demo();
+			DefaultInterfaceMethods.Demo();
 		}
     }
 }

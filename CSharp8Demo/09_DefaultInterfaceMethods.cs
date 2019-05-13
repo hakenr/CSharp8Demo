@@ -8,24 +8,42 @@ namespace Haken.CSharp8Demo
 {
 	public class DefaultInterfaceMethods
 	{
-		// Not released in Preview yet.
-	}
+		interface ILogger
+		{
+			void Log(LogLevel level, string message);
+			void Log(Exception ex) => Log(LogLevel.Error, "ILogger:" + ex.ToString()); // New overload
+		}
 
-	interface ILogger
-	{
-		void Log(LogLevel level, string message);
-		// public void Log(Exception ex) => Log(LogLevel.Error, ex.ToString()); // New overload
-	}
+		public class ConsoleLogger : ILogger
+		{
+			public void Log(LogLevel level, string message) { Console.WriteLine(message); }
+			// ConsoleLogger gets Log(Exception) default implementation
+		}
 
-	public class ConsoleLogger : ILogger
-	{
-		public void Log(LogLevel level, string message) {  }
-		// Log(Exception) gets default implementation
-	}
+		public class AnotherLogger : ILogger
+		{
+			public void Log(LogLevel level, string message) { }
+			public void Log(Exception ex) => Console.WriteLine("AnotherLogger:" + ex.ToString());
+		}
 
-	public enum LogLevel
-	{
-		Info,
-		Error
+		public enum LogLevel
+		{
+			Info,
+			Error
+		}
+
+		public static void Demo()
+		{
+			// won't compile: new ConsoleLogger().Log(new Exception("Test"));
+
+			((ILogger)new ConsoleLogger()).Log(new Exception("Test1"));
+
+			new AnotherLogger().Log(new Exception("Test3"));
+
+			((ILogger)new AnotherLogger()).Log(new Exception("Test2"));
+
+			ILogger logger = new AnotherLogger();
+			logger.Log(new Exception("Test4"));
+		}
 	}
 }
