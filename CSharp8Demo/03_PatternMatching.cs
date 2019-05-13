@@ -18,7 +18,7 @@ namespace Haken.CSharp8Demo
 			{
 				switch (o)
 				{
-					case Point p when p.X == 0 && p.Y == 0:
+					case Point p when (p.X == 0) && (p.Y == 0):
 						return "origin";
 					case Point p:
 						return $"({p.X}, {p.Y})";
@@ -29,12 +29,12 @@ namespace Haken.CSharp8Demo
 			Console.WriteLine(Display0(new Point(10, 20))); // (10, 20)
 
 
-			// C# 8.0 Switch Expression
+			// Recap: Same as C# 8.0 Switch Expression
 			string Display1(object o) => o switch
 			{
-				Point p when p.X == 0 && p.Y == 0	=> "origin",
-				Point p								=> $"({p.X}, {p.Y})",
-				_									=> "unknown"
+				Point p when (p.X == 0) && (p.Y == 0)	=> "origin",
+				Point p									=> $"({p.X}, {p.Y})",
+				_										=> "unknown"
 			};
 			Console.WriteLine(Display1(new Point(10, 20))); // (10, 20)
 
@@ -49,7 +49,7 @@ namespace Haken.CSharp8Demo
 			Console.WriteLine(Display2(new Point(10, 20))); // (10, 20)
 
 
-			// C# 8.0 Property patterns II
+			// C# 8.0 Property patterns - not null trick 1  
 			string Display3(object o) => o switch
 			{
 				Point { X: 0, Y: 0 }			=> "origin",
@@ -60,7 +60,18 @@ namespace Haken.CSharp8Demo
 			Console.WriteLine(Display3("blah")); // blah
 
 
-			// C# 8.0 Positional patterns - Deconstruction (Tuples)
+			// C# 8.0 Property patterns - not null trick 2
+			string Display3b(object o) => o switch
+			{
+				Point { X: 0, Y: 0 } => "origin",
+				Point { X: var x, Y: var y } => $"({x}, {y})",
+				null => "null",
+				_ => o.ToString(), // deafult => not null
+			};
+			Console.WriteLine(Display3b("blah")); // blah
+
+
+			// C# 8.0 Positional patterns - Deconstruction & Tuples
 			(int x, int y) = new Point(10, 10);
 			string Display4(object o) => o switch
 			{
