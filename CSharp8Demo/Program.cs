@@ -37,6 +37,9 @@ namespace Haken.CSharp8Demo
 
 			Console.WriteLine("\n=== DisposableRefStruct ===");
 			DisposableRefStruct.Demo();
+
+			Console.WriteLine("\n=== UnmanagedConstructedTypes ===");
+			UnmanagedConstructedTypes.Demo();
 		}
 	}
 }
