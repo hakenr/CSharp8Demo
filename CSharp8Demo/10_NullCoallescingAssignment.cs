@@ -10,7 +10,7 @@ namespace Haken.CSharp8Demo
     {
         public static void Demo()
 		{
-			object? o = null;
+			object o = 10;
 			var something = new object();
 
 

@@ -6,7 +6,7 @@
 		<AssemblyName>Haken.CSharp8Demo</AssemblyName>
 		<RootNamespace>Haken.CSharp8Demo</RootNamespace>
 		<LangVersion>preview</LangVersion>
-		<NullableContextOptions>enable</NullableContextOptions>
+		<Nullable>enable</Nullable>
 	</PropertyGroup>
 
 	<ItemGroup>
