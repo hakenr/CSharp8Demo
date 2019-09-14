@@ -13,13 +13,13 @@ namespace Haken.CSharp8Demo
 		{
 			string s;
 
-			s = "D:\\Demo"; // string
-			s = @"D:\Demo"; // @ = verbatim string
-			s = $"Today {DateTime.Today:g}"; // $ = interpolated string
+			s = "D:\\Demo";                             // string
+			s = @"D:\Demo";                             // @ = verbatim string
+			s = $"Today {DateTime.Today:g}";            // $ = interpolated string
 
-			s = $@"C# 7 interpolated verbatim string";
+			s = $@"C# 7 interpolated verbatim string";	// $ must precede @
 
-			s = @$"C# 8 interpolated verbatim string";
+			s = @$"C# 8 interpolated verbatim string";	// any @$ order
 
 
 			Console.WriteLine(s);

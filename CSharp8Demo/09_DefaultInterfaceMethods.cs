@@ -36,14 +36,14 @@ namespace Haken.CSharp8Demo
 		{
 			// won't compile: new ConsoleLogger().Log(new Exception("Test"));
 
-			((ILogger)new ConsoleLogger()).Log(new Exception("Test1"));
+			((ILogger)new ConsoleLogger()).Log(new Exception("Test1"));    // ILogger:System.Exception: Test1
 
-			new AnotherLogger().Log(new Exception("Test3"));
+			new AnotherLogger().Log(new Exception("Test3"));               // AnotherLogger:System.Exception: Test3
 
-			((ILogger)new AnotherLogger()).Log(new Exception("Test2"));
+			((ILogger)new AnotherLogger()).Log(new Exception("Test2"));    // AnotherLogger:System.Exception: Test3
 
-			ILogger logger = new AnotherLogger();
-			logger.Log(new Exception("Test4"));
+			ILogger logger = new AnotherLogger();                          
+			logger.Log(new Exception("Test4"));                            // AnotherLogger:System.Exception: Test4
 		}
 	}
 }

@@ -25,7 +25,7 @@ namespace Haken.CSharp8Demo
 
 
 			// supports pattern matching
-			string Display(object o) => o switch   // BTW local function (C# 7.0)
+			string Display(object o) => o switch   // BTW, local function (C# 7.0)
 			{
 				Point p when (p.X == 0) && (p.Y == 0)	=> "origin",
 				Point p									=> $"({p.X}, {p.Y})",

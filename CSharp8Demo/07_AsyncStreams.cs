@@ -10,9 +10,9 @@ namespace Haken.CSharp8Demo
     {
 		public async static Task Demo()
 		{
-			await using (var x = new MyAsyncDisposable())
+			await using (var x = new MyAsyncDisposable())		// IAsyncDisposable
 			{
-				await foreach (var i in x.GetBigResultsAsync())
+				await foreach (var i in x.GetBigResultsAsync()) // IAsyncEnumerable 
 				{
 					Console.WriteLine(i);
 				}

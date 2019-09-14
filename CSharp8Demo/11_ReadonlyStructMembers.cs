@@ -12,7 +12,7 @@ namespace Haken.CSharp8Demo
 		public double X { get; set; }
 		public double Y { get; set; }
 
-		public double Distance => Math.Sqrt(X * X + Y * Y);
+		public /* readonly */ double Distance => Math.Sqrt(X * X + Y * Y);
 
 		// creates defensive copy of 'this' if the Distance is not marked as read-only
 		public readonly override string ToString() =>

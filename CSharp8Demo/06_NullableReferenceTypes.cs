@@ -9,7 +9,7 @@ namespace Haken.CSharp8Demo
     public class NullableReferenceTypes
     {
 		// https://github.com/dotnet/csharplang/blob/master/proposals/nullable-reference-types-specification.md
-		// .csproj: <NullableContextOptions>enable</NullableContextOptions>
+		// .csproj: <Nullable>enable</Nullable>
 
 		public static void Demo()
 		{

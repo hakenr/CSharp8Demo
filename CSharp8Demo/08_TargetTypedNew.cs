@@ -12,10 +12,10 @@ namespace Haken.CSharp8Demo
 	{
 		public static void Demo()
 		{
-			// pre-C# 8.0
+			// Current C#
 			using (var reader = XmlReader.Create("https://knowledge-base.havit.eu/feed/", new XmlReaderSettings() { IgnoreWhitespace = true })) { }
 
-			// C# 8.0 - Not released in Preview yet
+			// Won't make it into the C# 8.0
 			// using var reader2 = XmlReader.Create("https://knowledge-base.havit.eu/feed/", new() { IgnoreWhitespace = true });
 
 			// Point[] ps = { new (1, 4), new (3,-2), new (9, 5) };
